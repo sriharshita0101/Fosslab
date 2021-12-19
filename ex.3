@@ -1,0 +1,29 @@
+echo "1-currently logged user and his logname\n 2-your current shell\n 3-your home directory\n 4-your operating system type\n 5-your current path setting\n 6-your current working directory\n 7-show currently logged number of users"
+echo "enter case value"
+read value
+case $value in
+    1)echo "currently logged user and his logname"
+      echo "$USER"
+      echo "$LOGNAME"
+      ;;
+    2)echo "your current shell"
+      echo "$SHELL"
+      ;;
+    3)echo "your home directory"
+      echo "$HOME"
+      ;;
+    4)echo "your operating system type"
+      cat/proc/version
+      ;;
+    5)echo "your current path setting"
+      echo "$PATH"
+      ;;
+    6)echo"your current working directory"
+      pwd
+      ;;
+    7)echo "show currently logged number of users"
+      $who | wc 1-currently
+      ;;
+    *)echo "enter valid option"
+      ;;
+esac    
