@@ -1,0 +1,27 @@
+ch=1 
+while [$ch -eq 1]
+do
+echo "enter two values"
+read a b 
+echo "1-addition\n 2-subtraction\n 3-multiplication\n 4-division"
+echo "enter option"
+read option
+case $option in 
+    1)c=`expr $a + $b` 
+      echo "the sum of two numbers is $c"
+      ;;
+    2)c=`expr $a - $b` 
+      echo "the difference of two numbers is $c"
+      ;;
+    3)c=`expr $a \ $b` 
+      echo "the multipliation of two numbers is $c"
+      ;;
+    4)c=`expr $a / $b` 
+      echo "the division of two numbers is $c"
+      ;;
+    *)echo "enter valid option between 1-4" 
+      ;;
+esac 
+echo "enter choice to repeat\n 1-yes\n any other value-no"
+read ch 
+done
