@@ -1,0 +1,91 @@
+A)CURL
+
+1.DOWNLOAD A SINGLE FILE
+the following command will get the content of the URL and display it in the STDOUT
+$curl htttp://www.centos.org
+2.SAVE THE CURL OUTPUT TO A FILE
+we can save the result of the curl command to a file by using -o/-o options.
+-o(lower case 0)the result will be save in the file name.
+3.FETCH MULTIPLE FILES AT A TIME
+we can download multiple file in a singke short by specifying the URL's on the command
+example:curl -o https://www.tutorials point.com/machine-learning/index.htnl
+4.FOLLOW HTTP LOCATION HEADERSNWITH -LOPTION
+by default CURL doesn't follow the HTTP location headers.It is also terned as redirects when a requestedweb has is move to another place,then an HTTP locaton header be sent as a respone all will the have where the actual 
+web page is located.
+examole:$curl-l http://www.google.com
+5.CONTINVE/RESUME APREVIOUS DOWNLOAD
+using curl-c option , you can continue a download which was stopped already for some reason this will be help full when you download large file and the download got interupted 
+CURL -OHTTP://WWWW.gnu.org/softwarelgettext/manual/get text.html.
+
+B)WGET
+
+GNU WGET is a command line utiling for downloading file from the web with wgte ,you can download files using HTTP,HTTPS,and FTP protocals.Wget provides a number of options allowing
+you to download multiple files,resume downloads ,limit the band width,recursion,downloads,download in the back ground ,mirror a website ,and much more
+1.INSTALLING WGET ON LINUX
+            sudo apt install wget
+            syntax of command
+            wget[option][url]
+2.TO DOWNLOAD TAR.TZ FILE FROM CDN.KERNEL.ORG
+ex1:wget http://cdn.kernel.org/pub linux/kernel/v4.x/linux-4.17.2.tax.xz
+ex2:wdget http://www.gmail.com/
+    it creates index.html
+if the file already exists,wget will add.N(number) at the end of the file name
+3.TO TURN OFF THE OUTPUT,USE THE -Q OPTION
+example 3:wget -q http:///www.gmail.com/
+4.TO SAVE THE DOWNLOAD FILE UNDER A DIFFERENT NAME ,PASS THE -O OPTION FOLLLOWED BY THE CHOSEN NAME
+EXAMPLE :wget -o latest -h-ZIP http://github.com/gohgoio/hugo/archive/master.ZIP
+the command above will same the latest hugo ZIP file from gihub as latest -hugozip insted of its original name.
+5.creating a mirror of a website with wget,use the to create a minor of website with wget,use the -m option .This will create a complete to all copy of the website by following
+and down loading all interval link as well as the web site resource(java script,css,images)
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+grep
+1.Case insensitive search :The -i option enables to search for a string case insensitively in the given file.It matches the word like "UNIX","Unix","unix".
+Ex:~$ grep -i "cat" exp.txt
+	for a word cat
+	cat
+	cat
+2.Displaying the count of number of matches:We can find the no.of lines that matches the given word.
+Ex:~$ grep -c "cat" exp.txt
+	3
+3.Display the file names that matches the pattern:We can just display the files that contains the given string.
+Ex:~$ grep -l "cat" *
+	grep:Desktop: Is a directory
+	grep:Documents: Is a directory
+	grep:Downloads:Is a directory
+	exp4.sh
+	exp4.sh~
+	exp.txt
+	hs-err-pid2272.log
+	kd.sh
+	kd.sh~
+	grep:Music:Is a directory
+	grep:Pictures:Is a directory  
+	grep:Public:Is a directory
+	grep:Templates:Is a directory
+4.Checking for the Whole words in a file :By Default,grep matches the given string/pattern even if it found as a substring in a file.The -w option to grep makes only the whole words.
+Ex:~$ grep -w "cat" exp.txt
+	for a word cat
+	cat is a animal
+	cat drinks milk
+5.Displaying only the matched pattern :By default ,grep displays the entire line which has the matched string.We can make the grep to display only the matched string by using the -o option.
+Ex:~$ grep -o "cat" exp.txt
+	cat
+	cat
+	cat
+6.Show line number while displaying the output using grep -n:To show the line no.of file with the matched.
+Ex:~$ grep -n "cat" exp.txt
+	3:for a word cat
+	4.cat is a animal 
+	5.cat drinks milk
+7.Inverting the pattern match:You can display the lines that are not matched with the specified search string pattern using -v option.
+Ex:~$ grep -v "cat" exp.txt
+	this is a sample program
+	for searching word in a file
+8.Matching the lines that start with a string :The ^ regular expression pattern specified the start of a line.
+Ex:~$ grep "^cat" exp.txt
+	cat is a animal
+	cat drinks milk
+9.Matching the lines that end with a string :The $ regular expression pattern specifies the end of a line.
+Ex:~$ grep "cat$" exp.txt
+	for a word cat
