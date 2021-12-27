@@ -1,0 +1,108 @@
+GETTING STARTED WITH LINUX BASIC COMMANDS AND DIRECTORY STRUCTURE,EXECUTE FILE,DIRECTORY OPERATIONS
+
+OPERATONS:
+---------
+1)pwd:Present working directory the PWD command is used to find out the content or present working directory.
+
+SYNTAX:$pwd
+example:$pwd
+o/p:/home/pscmr
+..............................................................................................................
+2)mkdir:Making the directory the mkdir command is used to make one more new directories.
+
+SYNTAX:$mkdir
+example:$mkdir 333
+$cd 333
+$pwd
+o/p:/home/pscmr/333
+.............................................................................................................
+3)cd:Changing the directory the present directory is it could be change to onther name by using  the cd command .As the user logs in he/she can get into any 
+required directory with the help of the cd command
+
+SYNTAX:$cd_file name
+example:$mkdir a1
+        $cd a1
+        $pwd
+o/p:/home/pscmr/a1
+................................................................................................................
+4)cat:concatenate files and print on the standard output
+SYNTAX:cat[option]__[filename]__
+CREATE A FILE SYNTAX:cat > file name
+example:$cat>ex1
+hello
+hai
+welcome to foss lab
+[+ctrl Z]
+for o/p:$cat ex1
+hello
+hai
+welcome to foss lab 
+...................................................................................................................
+5)copy:copying the file into onther file
+SYNTAX:cp__file1/directory1__file2/directory2
+exmaple:$cp ex1 ex2
+        $cat ex2
+o/p:hello
+    hai
+    welcome to foss lab
+...................................................................................................................
+6)rm:remove the file/remove the directory
+SYNTAX:rm_file name/directory name
+example:$rm c1
+        $cat c1
+o/p:no such file are in.
+.....................................................................................................................
+7)head:It is a comman for print first 10 lines in a file.or it print top n number of lines when n is given.
+SYNTAX:$head__filename and $head__-n__file name
+example:$head ex2
+o/p:1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+.......................................................................................................................
+8)tail:Tail is for last 10 line If n is given it print bottom n number of lines.
+SYNTAX:$tail_file name and $tail_-n_file name
+example:$tail ex3
+o/p:11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+............................................................................................................................
+9)man:man is a command providing the complete details osf all unix commands in a book.
+SYNTAX:$man_ls
+       $man_cp
+       $man_rm
+example:$man ls 
+o/p:
+ls(1)        -list directory contents
+.............................................................................................................................
+10)wc:word command
+      the command can be used to get count down the total no.of lines,characters contained in the files
+SYNTAX:wc_file name
+       wc_-l_file name(only for lines)
+       wc_-w_file name(only for words)
+       wc_-c_file name (only for characters)
+example:wc p1
+o/p:3 3 15 p1
+.................................................................................................................................
+11)who:who is shows who is logged on in our systems.
+SYNTAX:who_file name
+example:$who_b
+o/p:system bool  2019-06-10 15:01
+to know the no.of users enter into the system
+SYNTAX:who_-q_file name
+       who_|wc_-l_file name
+example:$who_-q_b
+o/p:1
